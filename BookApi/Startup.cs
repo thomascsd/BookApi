@@ -1,3 +1,4 @@
+using BookApi.EF;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookApi
 {
@@ -26,6 +28,10 @@ namespace BookApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<BookContext>(options =>
+            {
+                options.UseNpgsql(Configuration.GetConnectionString("BookDB"));
+            });
             
         }
 
@@ -37,7 +43,7 @@ namespace BookApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
