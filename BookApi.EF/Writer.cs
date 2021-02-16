@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BookApi.EF
 {
-  public  class Writer
+    public class Writer
     {
-
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public int WriterID { get; set; }
 
         [Required]
