@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BookApi.Service
+namespace BookApi.Service.Abstractions
 {
-  public  class BookService
+  public  class IBookService
     {
+        
+
 
     }
 }

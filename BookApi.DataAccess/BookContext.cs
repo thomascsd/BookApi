@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BookApi.EF
+namespace BookApi.DataAccess
 {
    public class BookContext: DbContext
     {

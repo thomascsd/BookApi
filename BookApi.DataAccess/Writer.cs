@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BookApi.EF
+namespace BookApi.DataAccess
 {
     public class Writer
     {

@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookApi", "BookApi\BookApi.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookApi.Service", "BookApi.Service\BookApi.Service.csproj", "{0DD62A42-D95A-4E9A-8074-CF43DA9886CB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookApi.EF", "BookApi.EF\BookApi.EF.csproj", "{C4009342-786C-4DEA-B862-59E9D7B587A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookApi.DataAccess", "BookApi.DataAccess\BookApi.DataAccess.csproj", "{C4009342-786C-4DEA-B862-59E9D7B587A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
