@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BookApi.Core\BookApi.Core.csproj" />
+    <ProjectReference Include="..\BookApi.DataAccess\BookApi.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

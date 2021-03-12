@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BookApi.DataAccess
@@ -18,5 +19,7 @@ namespace BookApi.DataAccess
 
         [Required]
         public int WriterID { get; set; }
+
+        public DateTime CreateTime { get; set; }
     }
 }

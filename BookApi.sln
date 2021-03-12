@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookApi.Service", "BookApi.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookApi.DataAccess", "BookApi.DataAccess\BookApi.DataAccess.csproj", "{C4009342-786C-4DEA-B862-59E9D7B587A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookApi.Core", "BookApi.Core\BookApi.Core.csproj", "{62050109-7519-4F99-A3C2-4E123FF3BEB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{C4009342-786C-4DEA-B862-59E9D7B587A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4009342-786C-4DEA-B862-59E9D7B587A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4009342-786C-4DEA-B862-59E9D7B587A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62050109-7519-4F99-A3C2-4E123FF3BEB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62050109-7519-4F99-A3C2-4E123FF3BEB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62050109-7519-4F99-A3C2-4E123FF3BEB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62050109-7519-4F99-A3C2-4E123FF3BEB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

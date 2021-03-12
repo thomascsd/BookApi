@@ -10,7 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BookApi.EF\BookApi.DataAccess.csproj" />
     <ProjectReference Include="..\BookApi.Service\BookApi.Service.csproj" />
   </ItemGroup>
 

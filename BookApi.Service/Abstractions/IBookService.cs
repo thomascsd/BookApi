@@ -1,13 +1,12 @@
-﻿using System;
+﻿using BookApi.Core.Dtos.Books;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BookApi.Service.Abstractions
 {
-  public  class IBookService
+    public interface IBookService
     {
-        
+        List<GetBooksDto> GetBooks();
 
-
+        void AddBook();
     }
 }
