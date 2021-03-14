@@ -7,6 +7,6 @@ namespace BookApi.Service.Abstractions
     {
         List<GetBooksDto> GetBooks();
 
-        void AddBook();
+        void AddBook(AddBookDto addBookDto);
     }
 }

@@ -16,9 +16,9 @@ namespace BookApi.Service.Impls
             this.m_context = context;
         }
 
-        public void AddBook()
+        public void AddBook(AddBookDto addBookDto)
         {
-            throw new NotImplementedException();
+           
         }
 
         public List<GetBooksDto> GetBooks()
