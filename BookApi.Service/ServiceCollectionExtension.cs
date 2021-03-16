@@ -1,16 +1,20 @@
 ﻿using BookApi.Service.Abstractions;
 using BookApi.Service.Impls;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace BookApi.Service
 {
     public static class ServiceCollectionExtension
     {
-        public static ServiceCollection AddBookService(this ServiceCollection service)
+        public static void AddBookService(this ServiceCollection services)
         {
-            service.AddTransient<IBookService, BookService>();
+            services.AddTransient<IBookService, BookService>();
+        }
 
-            return service;
+        public static void ConfigureAutoMap(this ServiceCollection services)
+        {
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
     }
 }
