@@ -28,10 +28,7 @@ namespace BookApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<BookContext>(options =>
-            {
-                options.UseNpgsql(Configuration.GetConnectionString("BookDB"));
-            });
+
             
         }
 

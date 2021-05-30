@@ -10,6 +10,7 @@ namespace BookApi.Service
         public static void AddBookService(this ServiceCollection services)
         {
             services.AddTransient<IBookService, BookService>();
+            services.AddTransient<IDataService, DataService>();
         }
 
         public static void ConfigureAutoMap(this ServiceCollection services)

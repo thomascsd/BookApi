@@ -1,12 +1,13 @@
 ﻿using BookApi.Core.Dtos.Books;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace BookApi.Service.Abstractions
 {
     public interface IBookService
     {
-        List<GetBooksDto> GetBooks();
+        Task<List<GetBooksDto>> GetBooks();
 
-        void AddBook(AddBookDto addBookDto);
+        Task AddBook(AddBookDto addBookDto);
     }
 }
