@@ -20,7 +20,7 @@ namespace BookApi.Service.Impls
             this.m_Mapper = mapper;
         }
 
-        public async Task<List<GetBooksDto>> GetBooks()
+        public async Task<IEnumerable<GetBooksDto>> GetBooks()
         {
             var books = await this.m_DataService.GetDatas<Book>(BASE_ID, "Book");
             var writers = await this.m_DataService.GetDatas<Writer>(BASE_ID, "Writer");

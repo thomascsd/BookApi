@@ -6,7 +6,7 @@ namespace BookApi.Service.Abstractions
 {
     public interface IBookService
     {
-        Task<List<GetBooksDto>> GetBooks();
+        Task<IEnumerable<GetBooksDto>> GetBooks();
 
         Task AddBook(AddBookDto addBookDto);
     }
