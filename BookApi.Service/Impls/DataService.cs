@@ -52,7 +52,7 @@ namespace BookApi.Service.Impls
 
             using (AirtableBase airTable = new AirtableBase(this.m_ApiKey, baseId))
             {
-                await airTable.CreateRecord(tableName, fields);
+                res = await airTable.CreateRecord(tableName, fields);
             }
 
             return res;

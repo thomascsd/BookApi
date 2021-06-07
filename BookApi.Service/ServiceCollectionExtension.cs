@@ -7,13 +7,13 @@ namespace BookApi.Service
 {
     public static class ServiceCollectionExtension
     {
-        public static void AddBookService(this ServiceCollection services)
+        public static void AddBookService(this IServiceCollection services)
         {
             services.AddTransient<IBookService, BookService>();
             services.AddTransient<IDataService, DataService>();
         }
 
-        public static void ConfigureAutoMap(this ServiceCollection services)
+        public static void ConfigureAutoMap(this IServiceCollection services)
         {
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
