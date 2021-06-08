@@ -23,7 +23,7 @@ namespace BookApi.Controllers
             return await this.m_BookService.GetBooks();
         }
 
-        [HttpPost("Book/Add")]
+        [HttpPost("Add")]
         public async Task<ActionResult> AddBook(AddBookDto addBookDto)
         {
             if (!ModelState.IsValid)

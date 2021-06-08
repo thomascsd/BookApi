@@ -20,7 +20,7 @@ namespace BookApi.Service.Impls
         public async Task<IEnumerable<T>> GetDatas<T>(string baseId, string tableName) where T : BaseModel
         {
             string offset = null;
-            List<T> datas = new List<T>();
+            List<T> models = new List<T>();
             List<AirtableRecord<T>> records = new List<AirtableRecord<T>>();
             AirtableListRecordsResponse<T> res;
 
@@ -34,7 +34,7 @@ namespace BookApi.Service.Impls
                 } while (offset != null);
             }
 
-            datas = records
+            models = records
                 .Select(m =>
                 {
                     m.Fields.Id = m.Id;
@@ -42,12 +42,12 @@ namespace BookApi.Service.Impls
                 })
                 .ToList();
 
-            return datas;
+            return models;
         }
 
-        public async Task<AirtableCreateUpdateReplaceRecordResponse> SaveData<T>(string baseId, string tableName, T data) where T : BaseModel
+        public async Task<AirtableCreateUpdateReplaceRecordResponse> SaveData<T>(string baseId, string tableName, T model) where T : BaseModel
         {
-            var fields = this.GetFields<T>(data);
+            var fields = this.GetFields<T>(model);
             AirtableCreateUpdateReplaceRecordResponse res;
 
             using (AirtableBase airTable = new AirtableBase(this.m_ApiKey, baseId))
@@ -58,14 +58,14 @@ namespace BookApi.Service.Impls
             return res;
         }
 
-        public async Task<AirtableCreateUpdateReplaceRecordResponse> UpdateData<T>(string baseId, string tableName, T data) where T : BaseModel
+        public async Task<AirtableCreateUpdateReplaceRecordResponse> UpdateData<T>(string baseId, string tableName, T model) where T : BaseModel
         {
-            var fields = this.GetFields<T>(data);
+            var fields = this.GetFields<T>(model);
             AirtableCreateUpdateReplaceRecordResponse res;
 
             using (AirtableBase airTable = new AirtableBase(this.m_ApiKey, baseId))
             {
-                res = await airTable.UpdateRecord(tableName, fields, data.Id);
+                res = await airTable.UpdateRecord(tableName, fields, model.Id);
             }
 
             return res;
@@ -83,14 +83,14 @@ namespace BookApi.Service.Impls
             return res;
         }
 
-        private Fields GetFields<T>(T data) where T : BaseModel
+        private Fields GetFields<T>(T model) where T : BaseModel
         {
             var dic = new Dictionary<string, object>();
             var props = typeof(T).GetProperties();
 
             foreach (var prop in props)
             {
-                object value = prop.GetValue(data);
+                object value = prop.GetValue(model);
                 dic.Add(prop.Name, value);
             }
 
