@@ -30,6 +30,7 @@ namespace BookApi.Service.Impls
                             on b.WriterID equals w.WriterID
                             select new GetBooksDto
                             {
+                                Id = b.Id,
                                 BookID = b.BookID,
                                 Description = b.Description,
                                 Title = b.Title,
